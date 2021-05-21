@@ -5,8 +5,9 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0-preview1.21075.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0-preview3.21140.5" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.6.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

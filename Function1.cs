@@ -12,6 +12,11 @@ namespace FunctionApp2
 {
     public static class Function1
     {
+        static Function1()
+        {
+            ApplicationHelper.Startup();
+        }
+
         [FunctionName("Function1")]
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
