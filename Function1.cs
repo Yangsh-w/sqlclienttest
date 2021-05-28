@@ -3,6 +3,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Azure.Core;
+using Azure.Identity;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
@@ -22,14 +24,24 @@ namespace FunctionApp2
         {
             log.Info("C# HTTP trigger function processed a request.");
 
+            //try
+            //{
+            //    log.Info("testing with only azure.identity 1.4, with binding redirect");
+            //    AccessToken token = new DefaultAzureCredential().GetToken(new TokenRequestContext());
+            //}
+            //catch (Exception ex)
+            //{
+            //    log.Info(ex.ToString());
+            //}
             var str = Environment.GetEnvironmentVariable("sqldb_connection");
 
-            try {
+            try
+            {
                 using (SqlConnection conn = new SqlConnection(str))
                 {
                     conn.Open();
                     string t = DateTime.Now.ToString();
-                    var text = "INSERT INTO timetest VALUES('"+t+"');";
+                    var text = "INSERT INTO timetest VALUES('" + t + "');";
 
                     using (SqlCommand cmd = new SqlCommand(text, conn))
                     {

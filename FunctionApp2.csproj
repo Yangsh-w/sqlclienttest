@@ -3,11 +3,13 @@
     <TargetFramework>net472</TargetFramework>
     <AzureFunctionsVersion>v1</AzureFunctionsVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0-preview3.21140.5" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0-preview2.21106.5" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.6.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
